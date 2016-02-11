@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
     validates :password, length: { minimum: 6 }, allow_nil: true, on: :update
     validates :location, length: { maximum: 20 }
     validates :location, presence: true,  on: :update
+    
+    has_many :microposts
 end
