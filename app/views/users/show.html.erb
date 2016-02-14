@@ -1,13 +1,18 @@
-<div class="row">
-  <aside class="col-md-4">
+<div class="col">
+  <aside class="col-md-3">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %><br>
       </h1>
     </section>
+    <div>  
+        <span><%= link_to "Followings", followings_user_path %></span> 
+        <span><%= link_to "Followers", followers_user_path %></span>
+    </div>
   </aside>
-  <div class="col-md-8">
+   
+ 　<div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
@@ -16,6 +21,4 @@
       </ol>
     <% end %>
   </div>
-  <span><%= link_to "Followings", followings_user_path %></span>
-  <span><%= link_to "Followers", followers_user_path %></span>
 </div>
