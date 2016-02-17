@@ -31,6 +31,7 @@ gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.36.0'
 
+gem 'cloudinary'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -53,5 +54,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor', '0.0.2'
+  
 end
